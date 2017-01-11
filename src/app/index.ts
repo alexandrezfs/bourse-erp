@@ -10,6 +10,7 @@ import {HeaderComponent} from './components/Header';
 import {MainSectionComponent} from './components/MainSection';
 import {TodoItemComponent} from './components/TodoItem';
 import {TodoTextInputComponent} from './components/TodoTextInput';
+import {SearchBarComponent} from './components/SearchBar';
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import {TodoTextInputComponent} from './components/TodoTextInput';
     HeaderComponent,
     MainSectionComponent,
     TodoItemComponent,
-    TodoTextInputComponent
+    TodoTextInputComponent,
+    SearchBarComponent
   ],
   bootstrap: [RootComponent]
 })
