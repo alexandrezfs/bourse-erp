@@ -13,6 +13,8 @@ import {MainSectionComponent} from './components/MainSection';
 import {TodoItemComponent} from './components/TodoItem';
 import {TodoTextInputComponent} from './components/TodoTextInput';
 import {SearchBarComponent} from './components/SearchBar';
+import {DisplayTextComponent} from './components/DisplayTextComponent';
+import {TransactionService} from './services/TransactionService';
 
 @NgModule({
   imports: [
@@ -22,6 +24,9 @@ import {SearchBarComponent} from './components/SearchBar';
     store,
     NgbModule.forRoot()
   ],
+  providers: [
+    TransactionService
+  ],
   declarations: [
     RootComponent,
     AppComponent,
@@ -30,7 +35,8 @@ import {SearchBarComponent} from './components/SearchBar';
     MainSectionComponent,
     TodoItemComponent,
     TodoTextInputComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    DisplayTextComponent
   ],
   bootstrap: [RootComponent]
 })

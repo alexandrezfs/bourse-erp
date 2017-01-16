@@ -1,4 +1,7 @@
-import {ADD_TODO, DELETE_TODO, EDIT_TODO, COMPLETE_TODO, COMPLETE_ALL, CLEAR_COMPLETED} from '../constants/ActionTypes';
+import {
+  ADD_TODO, DELETE_TODO, EDIT_TODO, COMPLETE_TODO, COMPLETE_ALL, CLEAR_COMPLETED,
+  ADD_TEXT
+} from '../constants/ActionTypes';
 import {SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE} from '../constants/TodoFilters';
 
 const initialTodo = {
@@ -11,6 +14,12 @@ const initialVisibility = {type: SHOW_ALL, filter: todo => true};
 
 export const todos = (state: any[] = [initialTodo], action: any) => {
   switch (action.type) {
+    case ADD_TEXT:
+      return [
+        {
+          text: action.text
+        }
+      ];
     case ADD_TODO:
       return [
         {
