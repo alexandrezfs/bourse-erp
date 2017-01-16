@@ -7,5 +7,5 @@ import {Component, Input, Output, EventEmitter} from '@angular/core';
 export class DisplayTextComponent {
 
   @Input() text: string = '';
-  
+
 }
