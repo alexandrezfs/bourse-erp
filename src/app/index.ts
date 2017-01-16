@@ -4,6 +4,8 @@ import {FormsModule} from '@angular/forms';
 import {routing, RootComponent} from './routes';
 import {store} from './reducers';
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 import {AppComponent} from './containers/App';
 import {FooterComponent} from './components/Footer';
 import {HeaderComponent} from './components/Header';
@@ -17,7 +19,8 @@ import {SearchBarComponent} from './components/SearchBar';
     BrowserModule,
     FormsModule,
     routing,
-    store
+    store,
+    NgbModule.forRoot()
   ],
   declarations: [
     RootComponent,

@@ -1,17 +1,73 @@
 <!doctype html>
 <html>
-  <head>
-    <base href="/">
-    <meta charset="utf-8">
-    <title>ngrx/store TodoMVC</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <link rel="icon" type="image/png" href="http://fountainjs.io/assets/imgs/fountain.png" />
-  </head>
+<head>
+  <base href="/">
+  <meta charset="utf-8">
+  <title>ngrx/store TodoMVC</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/png" href="http://fountainjs.io/assets/imgs/fountain.png"/>
+</head>
 
-  <body>
-    <div class="todoapp">
-      <fountain-root>Loading...</fountain-root>
+<body>
+
+<div class="container" style="padding-left: 0; padding-right: 0;">
+  <header class="navbar navbar-light navbar-fixed-top navbar-toggleable-md">
+    <button class="navbar-toggler navbar-toggler-right" type="button" (click)="navbarCollapsed = !navbarCollapsed"
+            [attr.aria-expanded]="!navbarCollapsed" aria-controls="navbarContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <a class="navbar-brand" [routerLink]="['/']">ng-bootstrap</a>
+
+    <div class="navbar-collapse" [ngbCollapse]="navbarCollapsed" id="navbarContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" [routerLinkActive]="['active']">
+          <a class="nav-link" [routerLink]="['/getting-started']">Getting Started</a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active']">
+          <a class="nav-link" [routerLink]="['/components']">Components</a>
+        </li>
+      </ul>
+
+      <span class="github-buttons">
+        <a class="github-button"
+           href="https://github.com/ng-bootstrap/ng-bootstrap"
+           target="_blank"
+           data-style="mega"
+           data-count-href="/ng-bootstrap/ng-bootstrap/stargazers"
+           data-count-api="/repos/ng-bootstrap/ng-bootstrap#stargazers_count"
+           data-count-aria-label="# stargazers on GitHub"
+           aria-label="Star ng-bootstrap/ng-bootstrap on GitHub">Star</a>
+        <a href="https://twitter.com/intent/tweet?button_hashtag=ngbootstrap"
+           class="twitter-hashtag-button"
+           data-size="large"
+           data-text="I&#39;m checking out ng-bootstrap, THE Angular 2 UI framework for Bootstrap CSS"
+           data-url="https://ng-bootstrap.github.io"
+           data-show-count="true">Tweet #ngbootstrap</a>
+      </span>
     </div>
-  </body>
+  </header>
+</div>
+
+<div class="todoapp">
+  <fountain-root>Loading...</fountain-root>
+</div>
+
+<footer class="bd-footer text-muted">
+  <div class="container">
+    <p>Designed and built by the <a href="https://github.com/orgs/ng-bootstrap/people" target="_blank">ng-bootstrap
+      team</a> with the help of our <a href="https://github.com/ng-bootstrap/ng-bootstrap/graphs/contributors"
+                                       target="_blank">contributors</a>.</p>
+    <p>Code licensed under <a href="https://raw.githubusercontent.com/ng-bootstrap/ng-bootstrap/master/LICENSE"
+                              target="_blank">MIT license conditions.</a></p>
+    <p>
+      Documentation licensed under <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.
+      Design and content of the documentation site heavily inspired by the <a href="http://v4-alpha.getbootstrap.com/"
+                                                                              target="_blank">original design</a>.</p>
+  </div>
+</footer>
+
+</body>
 </html>
