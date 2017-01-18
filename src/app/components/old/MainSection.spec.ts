@@ -3,13 +3,13 @@ import {FormsModule} from '@angular/forms';
 import {TestBed, async} from '@angular/core/testing';
 import {By} from '@angular/platform-browser';
 import {StoreModule, combineReducers} from '@ngrx/store';
-import {todos, visibility} from '../reducers/todos';
+import {todos, visibility} from '../../reducers/todos';
 import {MainSectionComponent} from './MainSection';
 import {TodoItemComponent} from './TodoItem';
 import {TodoTextInputComponent} from './TodoTextInput';
 import {FooterComponent} from './Footer';
-import * as actions from '../actions/index';
-import {SHOW_ALL, SHOW_COMPLETED} from '../constants/TodoFilters';
+import * as actions from '../../actions/index';
+import {SHOW_ALL, SHOW_COMPLETED} from '../../constants/TodoFilters';
 
 @Component({
   selector: 'fountain-todo-item',

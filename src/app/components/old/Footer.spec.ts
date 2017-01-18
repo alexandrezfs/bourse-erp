@@ -1,6 +1,6 @@
 import {FooterComponent} from './Footer';
 import {TestBed, async} from '@angular/core/testing';
-import {SHOW_ACTIVE} from '../constants/TodoFilters';
+import {SHOW_ACTIVE} from '../../constants/TodoFilters';
 
 describe('Footer component', () => {
   beforeEach(async(() => {

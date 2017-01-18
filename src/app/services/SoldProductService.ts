@@ -1,21 +1,20 @@
 import {Injectable} from "@angular/core";
 import {Observable} from "rxjs";
 import {Http, Response, URLSearchParams} from "@angular/http";
-import {Transaction} from "../entities/Transaction";
+import {SoldProduct} from "../entities/SoldProduct";
 import {API_BASE_URL} from "../constants/Config"
 
 @Injectable()
-export class TransactionService {
+export class SoldProductService {
 
-  private apiUrlPath = '/transactions';
+  private apiUrlPath = '/soldproducts';
 
   constructor (private http: Http) {}
 
-  getTransactionsByDateAndmagasin(date: string, magasin: string): Observable<Transaction[]> {
+  getSoldProductAnyKeyword(keyword: string): Observable<SoldProduct[]> {
 
     let params: URLSearchParams = new URLSearchParams();
-    params.set('date', date);
-    params.set('magasin', magasin);
+    params.set('keyword', keyword);
 
     return this.http.get(API_BASE_URL + this.apiUrlPath, { withCredentials: true, search: params })
       .map((res:Response) => res.json())

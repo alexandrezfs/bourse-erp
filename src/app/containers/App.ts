@@ -8,15 +8,15 @@ import * as actions from "../actions/index";
 })
 export class AppComponent {
 
-  text: string = '';
+  keyword: string = '';
 
   constructor(public store: Store<any[]>) {
 
   }
 
-  handleSave(text: string) {
-    this.text = text;
-    this.store.dispatch(actions.addText(text));
+  handleSave(keyword: string) {
+    this.keyword = keyword;
+    this.store.dispatch(actions.addText(keyword));
   }
 
 }

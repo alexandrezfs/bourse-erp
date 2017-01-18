@@ -1,6 +1,6 @@
 export class Transaction {
   constructor(
-    public id: Date,
+    public id,
     public prix,
     public magasin
   ){}

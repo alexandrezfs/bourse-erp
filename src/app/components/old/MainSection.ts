@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {Store} from '@ngrx/store';
 import {Observable} from 'rxjs/Rx';
-import * as actions from '../actions/index';
+import * as actions from '../../actions/index';
 
 @Component({
   selector: 'fountain-main-section',
