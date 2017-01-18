@@ -6,10 +6,11 @@ import {routing, RootComponent} from "./routes";
 import {store} from "./reducers";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {AppComponent} from "./containers/App";
-import {SearchBarComponent} from "./components/SearchBar";
-import {DisplayTextComponent} from "./components/DisplayTextComponent";
+import {SearchBarComponent} from "./components/searcher/SearchBar";
 import {TransactionService} from "./services/TransactionService";
 import {SoldProductService} from "./services/SoldProductService";
+import {SearcherComponent} from "./containers/Searcher";
+import {SearchResults} from "./components/searcher/SoldProductSearchResults";
 
 @NgModule({
   imports: [
@@ -28,7 +29,8 @@ import {SoldProductService} from "./services/SoldProductService";
     RootComponent,
     AppComponent,
     SearchBarComponent,
-    DisplayTextComponent
+    SearcherComponent,
+    SearchResults
   ],
   bootstrap: [RootComponent]
 })

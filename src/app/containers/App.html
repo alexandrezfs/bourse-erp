@@ -1,2 +1,53 @@
-<search-bar (onSave)="handleSave($event)"></search-bar>
-<display-text (onSave)="handleSave($event)" [keyword]="keyword"></display-text>
+<main class="container">
+  <section>
+    <div class="row">
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <article class="card">
+          <header class="title-header">
+            <h3>Searcher</h3>
+          </header>
+          <div class="card-block">
+            <!--<div class="img-card">
+              <img src="//placehold.it/300x250" alt="Movie" class="w-100" />
+            </div>-->
+            <p class="tagline card-text text-xs-center">Rechercher des produits ou des transactions.</p>
+            <a [routerLink]="['searcher']" class="btn btn-primary btn-block"><i class="fa fa-eye"></i> Lancer l'application</a>
+          </div>
+        </article>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <article class="card">
+          <header class="title-header">
+            <h3>Viewer</h3>
+          </header>
+          <div class="card-block">
+            <p class="tagline card-text text-xs-center">Voir le chiffre des ventes en temps réel.</p>
+            <a href="#" class="btn btn-primary btn-block"><i class="fa fa-eye"></i> Lancer l'application</a>
+          </div>
+        </article>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <article class="card">
+          <header class="title-header">
+            <h3>Reassorts</h3>
+          </header>
+          <div class="card-block">
+            <p class="tagline card-text text-xs-center">Imprimer les feuilles de réassorts.</p>
+            <a href="#" class="btn btn-primary btn-block"><i class="fa fa-eye"></i> Lancer l'application</a>
+          </div>
+        </article>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <article class="card">
+          <header class="title-header">
+            <h3>Comptabilité</h3>
+          </header>
+          <div class="card-block">
+            <p class="tagline card-text text-xs-center">Imprimer et consulter les éléments comptables.</p>
+            <a href="#" class="btn btn-primary btn-block"><i class="fa fa-eye"></i> Lancer l'application</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>

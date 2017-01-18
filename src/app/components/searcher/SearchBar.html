@@ -1,0 +1,32 @@
+
+<div class="container">
+
+  <div class="row">
+    <h3>Searcher</h3>
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-2">
+
+      <select class="form-control" [(ngModel)]="searchType">
+        <option *ngFor="let t of searchTypes" [ngValue]="t.name">{{t.label}}</option>
+      </select>
+
+    </div>
+
+    <div class="col-md-10">
+
+      <input
+        #myInput
+        class="form-control"
+        [(ngModel)]="keyword"
+        (keypress)="handleSubmit($event)"
+        type="text"
+      />
+
+    </div>
+
+  </div>
+
+</div>

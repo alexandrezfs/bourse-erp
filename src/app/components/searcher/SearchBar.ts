@@ -1,4 +1,5 @@
 import {Component, Output, EventEmitter, Renderer, Input, AfterViewInit, ViewChild, ElementRef} from '@angular/core';
+import {SEARCH_TYPES} from '../../constants/SearchTypes';
 
 @Component({
   selector: 'search-bar',
@@ -8,9 +9,14 @@ export class SearchBarComponent implements AfterViewInit {
 
   @ViewChild('myInput') input: ElementRef;
   @Output() onSave: EventEmitter<any> = new EventEmitter(false);
-  @Input() text: string = '';
+  searchTypes: any[];
+  keyword: string;
+  searchType: string;
 
-  constructor(private renderer: Renderer) {}
+  constructor(private renderer: Renderer) {
+    this.searchTypes = SEARCH_TYPES;
+    this.searchType = this.searchTypes[0].name;
+  }
 
   ngAfterViewInit() {
     this.renderer.invokeElementMethod(this.input.nativeElement, 'focus', []);
@@ -18,7 +24,10 @@ export class SearchBarComponent implements AfterViewInit {
 
   handleSubmit(e: any) {
     if (e.keyCode === 13) {
-      this.onSave.emit(this.text);
+      this.onSave.emit({
+        keyword: this.keyword,
+        searchType: this.searchType
+      });
     }
   }
 }
